@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# Установка необходимых библиотек
-# !pip install transformers==4.26.0 soundfile torch pandas tqdm matplotlib numpy
-
 import os
 import soundfile as sf
 import torch
@@ -28,7 +22,7 @@ processor = WhisperProcessor.from_pretrained(model_name)
 processor.feature_extractor.return_attention_mask = True
 model = WhisperForConditionalGeneration.from_pretrained(model_name).to(device)
 
-# Включение градиентного чекпоинтинга, если поддерживается моделью
+# Включение градиентного чекпоинтинга
 model.gradient_checkpointing_enable()
 
 # Функция для инференса модели
