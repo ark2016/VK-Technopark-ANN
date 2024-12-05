@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# Установка необходимых библиотек
-# !pip install transformers==4.26.0 soundfile torch pandas tqdm matplotlib numpy
-
 import os
 import soundfile as sf
 import torch
